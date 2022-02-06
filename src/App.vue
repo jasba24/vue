@@ -1,26 +1,46 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <main>
+    <LetterA></LetterA>
+  </main>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import LetterA from './components/LetterA.vue'
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1500px;
+  grid-template-rows: 250px 250px;
+  margin: 16px;
+  margin-right: 0;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(10, 150px);
+}
+.top,
+.center,
+.bottom,
+.left,
+.right {
+  background-color: red;
+}
+.a,
+.b,
+.e,
+.h,
+.i,
+.j,
+.n,
+.o,
+.s,
+.t {
+  width: 120px;
+  height: 200px;
+  display: grid;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(5, 20%);
 }
 </style>
